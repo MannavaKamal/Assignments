@@ -5,15 +5,17 @@
         static void Main(string[] args)
         {
             string inputString = Console.ReadLine();
-            char[] arr = inputString.ToCharArray();
-            Array.Reverse(arr);
-            string reversed = new string(arr);
-
-            if (inputString == reversed) { 
-                 Console.WriteLine("Yes your string is palinprome");
-                return;
+            char[] strarr = inputString.ToCharArray();
+            int len = strarr.Length;
+            for (int i = 0; i <len ; i++)
+            {
+                if (strarr[i] != strarr[len - i - 1])
+                {
+                    Console.WriteLine("No your string not a palinprome");
+                    return;
+                }
             }
-            Console.WriteLine("No your string not a palinprome");
+            Console.WriteLine("Yes your string is palinprome");
         }
     }
 }

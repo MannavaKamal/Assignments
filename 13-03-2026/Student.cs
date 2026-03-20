@@ -27,37 +27,43 @@ public class Student
         return sum / 5;
     }
 
-    public void CalculateGrade(double AverageMarks)
+    public string CalculateGrade()
     {
+        double AverageMarks = CalculateAverage();
         if (AverageMarks >= 90 && AverageMarks <= 100)
         {
-            Console.Write("A+");
+            return ("A+");
         }
         else if (AverageMarks >= 80)
         {
-            Console.Write("A");
+            return ("A");
         }
         else if (AverageMarks >= 70)
         {
-            Console.Write("B");
+            return  ("B");
         }
         else if (AverageMarks >= 60)
         {
-            Console.Write("C");
+            return  ("C");
         }
         else if (AverageMarks >= 50)
         {
-            Console.Write("D");
+            return ("D");
         }
         else
         {
-            Console.Write("Fail");
+            return ("Fail");
         }
 
-        Console.Write(" Grade");
-
-
-
+       
     }
+
+    public void Display()
+    {
+        string marksarr = string.Join(", ", Marks);
+        Console.WriteLine($"name =  {Name} ,\n RollNUmber = {RollNumber} ,\n Marks = {marksarr} ,\n Average Marks = {CalculateAverage() } ,\n Calculate Grade = {CalculateGrade()}");
+    }
+
+
 }
 

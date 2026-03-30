@@ -10,9 +10,6 @@ internal class Student
     internal int Age { get; set; }
     internal int Marks { get; set; }
 
-    public override string ToString()
-    {
-        return $"Name = {Name} , Age = {Age} , Marks = {Marks}";
-    }
+   
 
 }

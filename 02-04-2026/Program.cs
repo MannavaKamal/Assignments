@@ -23,10 +23,10 @@ internal class Program
         if (students.Exists(markspredicate))
         {
             afterPredicate = students.FindAll(markspredicate);
-            Console.WriteLine("Students with marks greater than 60");
+            Console.WriteLine("Students with Marks > 60");
             foreach (Student student in afterPredicate)
             {
-                Console.WriteLine(student.ToString());
+                Console.WriteLine(student.Name);
             }
         }
         else
@@ -39,10 +39,10 @@ internal class Program
         {
             afterPredicate = students.FindAll(agePredicate);
 
-            Console.WriteLine("Students with Age less than 18");
+            Console.WriteLine("Students Age < 18:");
             foreach (Student student in afterPredicate)
             {
-                Console.WriteLine(student.ToString());
+                Console.WriteLine(student.Name);
             }
         }
         else
@@ -58,10 +58,10 @@ internal class Program
         }
         afterPredicate = students.FindAll(Namepredicate);
 
-        Console.WriteLine("Students with Name Starts with A");
+        Console.WriteLine("Names starting with A:");
         foreach (Student student in afterPredicate)
         {
-            Console.WriteLine(student.ToString());
+            Console.WriteLine(student.Name);
         }
 
 
